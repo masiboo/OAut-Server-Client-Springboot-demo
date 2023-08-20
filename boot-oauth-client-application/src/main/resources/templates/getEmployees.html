@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+<!--<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">-->
+<title>Add Employee</title>
+</head>
+<body>
+	<h3 style="color: red;">Add New Employee</h3>
+
+	<div id="addEmployee">
+		<form action="http://localhost:8080/oauth/authorize"
+			method="post" modelAttribute="emp">
+
+				<label>Response type</label>
+				 <input type="text" name="response_type" value="code" />
+			<br> </br>
+				<label>Client ID</label>
+				 <input type="text" name="client_id" value="javainuse" />
+			<br> </br>
+				<label>Redirect Uri</label>
+				 <input type="text" name="redirect_uri" value="http://localhost:8090/showEmployees" />
+			<br>  </br>
+			   <label>Scoop</label>
+				<input type="text" name="scope" value="read" />
+			<br>   </br>
+				 <input type="SUBMIT" value="Get approval by OAuth for the Employee info API call" />
+		</form>
+	</div>
+</body>
+</html>

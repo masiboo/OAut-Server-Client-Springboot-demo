@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Employees</title>
+</head>
+<body>
+<!-- Check if error and errorDescription are present in the model -->
+<th:block th:if="${error != null and errorDescription != null}">
+    <div style="color: red;">
+        <p>Error Reason: <span th:text="${error}"></span></p>
+        <p>Error Description: <span th:text="${errorDescription}"></span></p>
+    </div>
+</th:block>
+
+<!-- Your other content here -->
+
+</body>
+</html>
